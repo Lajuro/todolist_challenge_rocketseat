@@ -8,13 +8,14 @@ import styles from './Tasks.module.css'
 interface TasksProps {
   tasks: [
     {
+      id: string;
       message: string;
       status: boolean;
     }
   ]
 }
 
-export function Tasks({ tasks }: TasksProps) {
+export function Tasks({ tasks, handleChange, handleDelete }: TasksProps) {
   return (
     <div className={styles.container}>
       <main className={styles.box}>
@@ -24,7 +25,7 @@ export function Tasks({ tasks }: TasksProps) {
         </header>
         <section className={styles.tasks} >
           {tasks.length > 0 ? tasks.map(task => (
-            <Task message={task.message} status={task.status} key={task.message} />
+            <Task message={task.message} status={task.status} taskId={task.id} handleChange={handleChange} handleDelete={handleDelete} key={task.id}  />
           )) : (
             <EmptyTasks />
           )}

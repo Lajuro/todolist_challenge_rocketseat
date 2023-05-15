@@ -14,6 +14,7 @@
   --color-purple-dark: #5E60CE;
   --color-blue: #4EA8DE;
   --color-blue-dark: #1E6F9F;
+  --color-blue-dark-20: rgba(30, 112, 159, 0.20);
 }
 
 * {
