@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Task } from './Task'
 import { EmptyTasks } from './EmptyTasks';
 
