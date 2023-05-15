@@ -1,0 +1,9 @@
+.box {
+  height: 20rem;
+  background-color: var(--color-gray-700);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

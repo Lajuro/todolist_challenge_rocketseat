@@ -1,10 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import './Main.css'
+import { Header } from './components/Header'
+import { Tasks } from './components/Tasks'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// const tasks = []
+
+const tasks = [
+  {
+    message: "Fazer compras",
+    status: false
+  },
+  {
+    message: "Cortar a grama",
+    status: true
+  },
+  {
+    message: "Lavar as roupas",
+    status: true
+  },
+  {
+    message: "Limpar o quintal",
+    status: false
+  }
+]
+
+function Main() {
+
+  return (
+    <>
+      <Header />
+      <Tasks tasks={tasks} />
+    </>
+  )
+}
+
+export default Main
